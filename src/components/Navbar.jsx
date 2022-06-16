@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 
 const Navbar = () => {
   const amount = useSelector(state => state.amount)
+ 
   return (
     <div>
       Amount  : {amount}

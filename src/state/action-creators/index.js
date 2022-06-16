@@ -4,14 +4,17 @@ export const depositmoney = (amount) => {
             type: 'deposit',
             payload: amount
         })
+        console.log('deposit called')
     }
 }
 
 export const withdrawmoney = (amount) => {
     return (dispatch)=>{
         dispatch({
-            item: 'withdraw',
+            type: 'withdraw',
             payload: amount
         })
+        console.log('Withdraw called')
+
     }
 }
