@@ -1,14 +1,18 @@
-const reducer = (state=0, action) => {
-    if (action.item === 'deposit')
+const amountreducer = (state=0,action) => {
+    if (action.type === 'deposit')
     {
-        return state + action.payload
+        console.log('deposit reducer called')
+             return state + action.payload
     }
-    else if (action.item === 'withdraw')
+    else if (action.type === 'withdraw')
     {
-        return state - action.payload
+        console.log('withdraw reducer called')
+            return state - action.payload
     }
     else {
-        return state;
+        console.log('default reducer called')
+        console.log(action)
+            return state;
     }
 }
-export default reducer;
+export default amountreducer;
